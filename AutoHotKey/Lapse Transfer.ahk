@@ -9,7 +9,7 @@ destination = H:\Timeshots\new
 prefix = moln
 digits = 3
 
-; Gui
+; gui
 Gui, +AlwaysOnTop +LabelPhotoTransfer +ToolWindow -MinimizeBox -SysMenu
 Gui, Color, White
 Gui, Font,, Segoe UI
@@ -17,12 +17,14 @@ Gui, Add, Button, x200 y167 w75 h23,   Cancel
 Gui, Add, Button, x117 y167 w75 h23,   Transfer
 Gui, Show, h200 w290,                  File Transfer
 
+; text
 Gui, Add, Text, x20 y10 w120 h20,   Source
 Gui, Add, Text, x20 y40 w120 h20,   Destination
 Gui, Add, Text, x20 y70 w120 h20,   Prefix
 Gui, Add, Text, x20 y100 w120 h20,  Digits
 Gui, Add, Text, x20 y130 w120 h20,  Type
 
+; inputs
 Gui, Add, Edit, x100 y10 w174 h20 vsource,       %source%
 Gui, Add, Edit, x100 y40 w174 h20 vdestination,  %destination%
 Gui, Add, Edit, x100 y70 w174 h20 vprefix,       %prefix%
@@ -37,20 +39,22 @@ ExitApp
 ButtonTransfer:
 Gui, Submit
 
-ifNotExist, %destination%
+; create dir
+ifNotExist, %destination% {
    FileCreateDir, %destination%
+}
 
 i = 1
 file = %source%\*.%type%
-Loop, %file%
-{
+Loop, %file% {
    postfix := i
    zeros := digits - StrLen(i)
-   Loop, %zeros%
-   {
+
+   Loop, %zeros% {
       postfix = 0%postfix%
    }
 
+   ; move
    FileMove, %file%, %destination%\%prefix%-%postfix%.*
    i++
 }
