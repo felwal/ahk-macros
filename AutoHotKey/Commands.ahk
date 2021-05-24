@@ -3,119 +3,157 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-:*:anst::android studio
+; hotskeys
 
 ^space::
-   Send, {space}{space}{space}
+   Send, {space}{space}{space}{space}
 Return
 
-; symbols
+; hotstrings
+
+; mail
+***REMOVED***
+***REMOVED***
+***REMOVED***
+
+; abbreviations
+:*:anst::android studio
+:*:ciq::connect iq
+:*:giq::garmin iq
+:*:gciq::garmin connect iq
+
+; punctuation
 :*:&thinsp:: 
 :*:&hairsp:: 
 :*:&ndash::–
+:*:&--::–
 :*:&mdash::—
+:*:&tilde::"~"
+:*:&!?::‽
+:*:&?!::‽
+:*:&...::…
+:*:&***::⁂
+:*:&fleuron::❦
+:*:&curren::¤
+:*:&dagger::†
+:*:&ddagger::‡
+:*:&paragraph::¶
+:*:&tm::™
+:*:&bullet::•
 
-; misc letters
-::nabla::∇
-::alef::ℵ
-::integral::∫
+; math
+:*:&inf::∞
+:*:&nabla::∇
+:*:&dell::∂
+:*:&integral::∫
+:*:&cintegral::∮
+:*:&sintegral::∬
+:*:&vintegral::∭
+:*:&dot::·
+:*:&cross::×
+:*:&tensor::⊗
+:*:&hadamard::⊙
+:*:&oplus::⊕
+:*:&div::÷
+:*:&ball::○
+:*:&sqrt::√
+:*:&ceil::⌈⌉
+:*:&floor::⌊⌋
+:*:&ordo::𝒪
+:*:&+-::±
+:*:&!=::≠
+:*:&approx::≈
+:*:&prop::∝
+:*:&congruent::≡
+:*:&subset::⊆
+:*:&tsubset::⊂
+:*:&belongs::∈
+:*:&complement::∁
+:*:&union::∪
+:*:&intersect::∩
+:*:&empty::∅
+:*:&forall::∀
+:*:&exists::∃
+:*:&or::∨
+:*:&and::∧
+:*:&therefore::∴
+:*:&because::∵
+:*:&parallell::∥
+:*:&perp::⊥
+:*:&<=::≤
+:*:&>=::≤
+:*:&=>::≥
+:*:&<=>::⇔
+:*:&->::→
+:*:&|->::↦
+:*:&angle::⟨⟩
+:*:&natural::ℕ
+:*:&integer::ℤ
+:*:&rational::ℚ
+:*:&real::ℝ
+:*:&complex::ℂ
+:*:&hcomplex::ℍ
+
+; hebrew
+:*:&aleph::ℵ
+:*:&beth::ב
 
 ; greek
-::alpha::α
-::beta::β
-::gamma::γ
-::delta::δ
-::epsilon::ε
-::theta::θ
-::lambda::λ
-::my::μ
-::xi::ξ
-::pi::π
-::rho::ρ
-::sigma::σ
-::phi::φ
-::psi::ψ
-::omega::ω
-
-; greek (not working)
-<^>!+a::L
-<^>!a::α
-<^>!+b::β
-<^>!b::β
-<^>!+c::G
-<^>!c::ψ
-<^>!+d::δ
-<^>!d::δ
-<^>!+e::ε
-<^>!e::ε
-<^>!+f::φ
-<^>!f::φ
-<^>!+g::γ
-<^>!g::γ
-<^>!+h::η
-<^>!h::η
-<^>!+i::ι
-<^>!i::ι
-<^>!+j::ξ
-<^>!j::ξ
-<^>!+k::κ
-<^>!k::κ
-<^>!+l::λ
-<^>!l::λ
-<^>!+m::μ
-<^>!m::μ
-<^>!+n::ν
-<^>!n::ν
-<^>!+o::ο
-<^>!o::ο
-<^>!+p::π
-<^>!p::π
-<^>!+r::ρ
-<^>!r::ρ
-<^>!+s::σ
-<^>!s::L
-<^>!+t::τ
-<^>!t::τ
-<^>!+u::θ
-<^>!u::θ
-<^>!+v::ω
-<^>!v::ω
-<^>!w::ς
-<^>!+x::χ
-<^>!x::χ
-<^>!+y::υ
-<^>!y::υ
-<^>!+z::ζ
-<^>!z::ζ
+:*:&alpha::α
+:*:&beta::β
+:*:&gamma::γ
+:*:&delta::δ
+:*:&epsilon::ε
+:*:&digamma::ϝ
+:*:&zeta::ζ
+:*:&eta::η
+:*:&heta::ͱ
+:*:&theta::θ
+:*:&jota::ι
+:*:&kappa::κ
+:*:&lambda::λ
+:*:&my::μ
+:*:&ny::ν
+:*:&xi::ξ
+:*:&omicron::ο
+:*:&pi::π
+:*:&san::ϻ
+:*:&koppa::ϟ
+:*:&rho::ρ
+:*:&sigma::σ
+:*:&stigma::ς
+:*:&tau::τ
+:*:&ypsilon::υ
+:*:&phi::φ
+:*:&chi::χ
+:*:&psi::ψ
+:*:&omega::ω
+:*:&sampi::ϡ
 
 ; overline
-:*:overlinea::a̅
-:*:overlineb::b̅
-:*:overlinec::c̅
-:*:overlined::d̅
-:*:overlinee::e̅
-:*:overlinef::f̅
-:*:overlineg::g̅
-:*:overlineh::h̅
-:*:overlinei::i̅
-:*:overlinej::j̅
-:*:overlinek::k̅
-:*:overlinel::l̅
-:*:overlinem::m̅
-:*:overlinen::n̅
-:*:overlineo::o̅
-:*:overlinep::p̅
-:*:overlineq::q̅
-:*:overliner::r̅
-:*:overlines::s̅
-:*:overlinet::t̅
-:*:overlineu::u̅
-:*:overlinev::v̅
-:*:overlinew::w̅
-:*:overlinex::x̅
-:*:overliney::y̅
-:*:overlinez::z̅
+:*:olinea::a̅
+:*:olineb::b̅
+:*:olinec::c̅
+:*:olined::d̅
+:*:olinee::e̅
+:*:olinef::f̅
+:*:olineg::g̅
+:*:olineh::h̅
+:*:olinei::i̅
+:*:olinej::j̅
+:*:olinek::k̅
+:*:olinel::l̅
+:*:olinem::m̅
+:*:olinen::n̅
+:*:olineo::o̅
+:*:olinep::p̅
+:*:olineq::q̅
+:*:oliner::r̅
+:*:olines::s̅
+:*:olinet::t̅
+:*:olineu::u̅
+:*:olinev::v̅
+:*:olinew::w̅
+:*:olinex::x̅
+:*:oliney::y̅
+:*:olinez::z̅
