@@ -48,6 +48,7 @@ Return
 :*:&dell::∂
 :*:&integral::∫
 :*:&cintegral::∮
+:*:&quaternion::⨖
 :*:&sintegral::∬
 :*:&vintegral::∭
 :*:&dot::·
