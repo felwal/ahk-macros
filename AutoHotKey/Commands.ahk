@@ -43,6 +43,7 @@ Return
 
 ; math
 :*:&inf::∞
+:*:&box::□
 :*:&nabla::∇
 :*:&dell::∂
 :*:&integral::∫
