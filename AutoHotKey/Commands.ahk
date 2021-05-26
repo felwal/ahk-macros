@@ -34,12 +34,29 @@ Return
 :*:&...::…
 :*:&***::⁂
 :*:&fleuron::❦
+:*:&leaf::❦
 :*:&curren::¤
 :*:&dagger::†
 :*:&ddagger::‡
 :*:&paragraph::¶
 :*:&tm::™
 :*:&bullet::•
+:*:&numero::№
+:*:&''::‹›
+:*:&""::«»
+:*:&angle::⟨⟩
+:*:&()::⟨⟩
+:*:&[]::〔〕
+:*:&[[]]::⟦⟧
+
+; emoji
+:*:&<3::❤
+
+; playing cards
+:*:&spades::♠
+:*:&hearts::♥
+:*:&diams::♦
+:*:&clubs::♣
 
 ; math
 :*:&inf::∞
@@ -47,15 +64,17 @@ Return
 :*:&nabla::∇
 :*:&dell::∂
 :*:&integral::∫
-:*:&cintegral::∮
+:*:&curint::∮
 :*:&quaternion::⨖
-:*:&sintegral::∬
-:*:&vintegral::∭
+:*:&surint::∬
+:*:&volint::∭
 :*:&dot::·
+:*:&*::·
 :*:&cross::×
-:*:&tensor::⊗
-:*:&hadamard::⊙
-:*:&oplus::⊕
+:*:&x::×
+:*:&ox::⊗
+:*:&o*::⊙
+:*:&o+::⊕
 :*:&div::÷
 :*:&ball::○
 :*:&sqrt::√
@@ -65,6 +84,7 @@ Return
 :*:&+-::±
 :*:&!=::≠
 :*:&approx::≈
+:*:&~=::≈
 :*:&prop::∝
 :*:&congruent::≡
 :*:&subset::⊆
@@ -82,13 +102,12 @@ Return
 :*:&because::∵
 :*:&parallell::∥
 :*:&perp::⊥
-:*:&<=::≤
-:*:&>=::≤
-:*:&=>::≥
+::&<=::≤
+:*:&>=::≥
+:*:&=>::⇒
 :*:&<=>::⇔
 :*:&->::→
 :*:&|->::↦
-:*:&angle::⟨⟩
 :*:&natural::ℕ
 :*:&integer::ℤ
 :*:&rational::ℚ
