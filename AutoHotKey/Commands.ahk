@@ -23,6 +23,7 @@ Return
 :*:gciq::garmin connect iq
 
 ; punctuation
+:*:&nbsp:: 
 :*:&thinsp:: 
 :*:&hairsp:: 
 :*:&ndash::–
