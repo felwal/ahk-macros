@@ -16,6 +16,10 @@ Return
   Send, {space 4}
 Return
 
+; disable insert
+Insert::
+Return
+
 ; hotstrings
 
 ; mail
