@@ -22,6 +22,12 @@ Return
 :*:giq::garmin iq
 :*:gciq::garmin connect iq
 
+; markdown
+::summary::[summary]: # ""
+::--::–
+::---::—
+:*:"::»«{Left}
+
 ; punctuation
 :*:&nbsp:: 
 :*:&thinsp:: 
@@ -45,14 +51,14 @@ Return
 :*:&tm::™
 :*:&bullet::•
 :*:&numero::№
-:*:&''::›‹
-:*:&><::›‹
-:*:&""::»«
-:*:&>><<::»«
-:*:&angle::⟨⟩
-:*:&()::⟨⟩
-:*:&[]::〔〕
-:*:&[[]]::⟦⟧
+:*:&''::›‹{Left}
+:*:&><::›‹{Left}
+:*:&""::»«{Left}
+:*:&>><<::»«{Left}
+:*:&angle::⟨⟩{Left}
+:*:&()::⟨⟩{Left}
+:*:&[]::〔〕{Left}
+:*:&[[]]::⟦⟧{Left}
 
 ; emoji
 :*:&<3::❤
@@ -83,8 +89,8 @@ Return
 :*:&div::÷
 :*:&ball::○
 :*:&sqrt::√
-:*:&ceil::⌈⌉
-:*:&floor::⌊⌋
+:*:&ceil::⌈⌉{Left}
+:*:&floor::⌊⌋{Left}
 :*:&ordo::𝒪
 :*:&+-::±
 :*:&!=::≠
