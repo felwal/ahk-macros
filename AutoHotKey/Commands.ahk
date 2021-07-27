@@ -6,7 +6,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; hotskeys
 
 ^space::
-   Send, {space}{space}{space}{space}
+   Send, {space 4}
 Return
 
 ; hotstrings
@@ -17,24 +17,34 @@ Return
 ***REMOVED***
 
 ; abbreviations
-:*:anst::android studio
-:*:ciq::connect iq
-:*:giq::garmin iq
-:*:gciq::garmin connect iq
+***REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***
 
-; markdown
-::summary::[summary]: # ""
+; coding
+:*b0:<!::--  -->{Left 4}
+:*:mdsum::[summary]: {#} ""{Left}
+
+; writing
+:*?:---::—
 ::--::–
-::---::—
+; :*:"::””{Left}
+; :*:'::’’{Left}
+; :*:"::“”{Left}
+; :*:'::‘’{Left}
 :*:"::»«{Left}
+:*:'::›‹{Left}
+; :*?:...::…
 
 ; punctuation
 :*:&nbsp:: 
 :*:&thinsp:: 
 :*:&hairsp:: 
 :*:&ndash::–
-:*:&--::–
+::&--::–
 :*:&mdash::—
+::&---::—
 :*:&tilde::"~"
 :*:&!?::‽
 :*:&?!::‽
