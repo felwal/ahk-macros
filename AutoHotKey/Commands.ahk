@@ -5,9 +5,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; hotskeys
 
-^space::
-   Send, {space 4}
-Return
+F1::Suspend, Toggle
+^space::Send, {space 4}
 
 ; hotstrings
 
@@ -25,17 +24,6 @@ Return
 ; coding
 :*b0:<!::--  -->{Left 4}
 :*:mdsum::[summary]: {#} ""{Left}
-
-; writing
-:*?:---::—
-::--::–
-; :*:"::””{Left}
-; :*:'::’’{Left}
-; :*:"::“”{Left}
-; :*:'::‘’{Left}
-:*:"::»«{Left}
-:*:'::›‹{Left}
-; :*?:...::…
 
 ; punctuation
 :*:&nbsp:: 
