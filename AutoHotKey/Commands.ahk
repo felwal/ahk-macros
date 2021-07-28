@@ -6,10 +6,17 @@ SetWorkingDir, % A_ScriptDir  ; Ensures a consistent starting directory.
 
 ; hotskeys
 
+; toggle script
 F1::
   Suspend, Toggle
 Return
 
+; restart continious scripts
+#a::
+  Run, % "AutoStart.ahk"
+Return
+
+; spaced indent
 ^space::
   Send, {space 4}
 Return
