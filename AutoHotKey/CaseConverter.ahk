@@ -41,19 +41,19 @@ Return
   SelectionPascal := PascalCase(Selection)
   SelectionCap := CapCase(Selection)
 
-  if (Selection = SelectionSpace) {
+  if (Selection == SelectionSpace and not Selection == SelectionKebab) {
     ReplaceSelection(SelectionKebab)
   }
-  else if (Selection == SelectionKebab) {
+  else if (Selection == SelectionKebab and not Selection == SelectionSnake) {
     ReplaceSelection(SelectionSnake)
   }
-  else if (Selection == SelectionSnake) {
+  else if (Selection == SelectionSnake and not Selection == SelectionCamel) {
     ReplaceSelection(SelectionCamel)
   }
   else if (Selection == SelectionCamel) {
     ReplaceSelection(SelectionPascal)
   }
-  else if (Selection == SelectionPascal) {
+  else if (Selection == SelectionPascal and not Selection == SelectionCap) {
     ReplaceSelection(SelectionCap)
   }
   else {
@@ -141,7 +141,7 @@ SentenceCase(String) {
 }
 
 WordCase(String) {
-  StringLower, StringCased, % String, T
+  StringLower, StringCased, % String, % "T"
   Return StringCased
 }
 
