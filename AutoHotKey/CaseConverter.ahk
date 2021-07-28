@@ -5,7 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; hotkeys
 
-; toggle
+; toggle intra
 ^+t::
   Selection := GetSelection()
 
@@ -17,7 +17,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
   if (Selection == SelectionLower) {
     ReplaceSelection(SelectionSentence)
   }
-  else if (Selection == SelectionSentence) {
+  else if (Selection == SelectionSentence and not Selection == SelectionWord) {
     ReplaceSelection(SelectionWord)
   }
   else if (Selection == SelectionWord) {
@@ -25,6 +25,26 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
   }
   else {
     ReplaceSelection(SelectionLower)
+  }
+
+Return
+
+; toggle inter
+^+m::
+  Selection := GetSelection()
+
+  SelectionSpace := SpaceCase(Selection)
+  SelectionSnake := SnakeCase(Selection)
+  SelectionKebab := KebabCase(Selection)
+
+  if (Selection = SelectionSpace) {
+    ReplaceSelection(SelectionSnake)
+  }
+  else if (Selection = SelectionSnake) {
+    ReplaceSelection(SelectionKebab)
+  }
+  else {
+    ReplaceSelection(SelectionSpace)
   }
 
 Return
@@ -49,7 +69,37 @@ Return
   ReplaceSelection(UpperCase(GetSelection()))
 Return
 
-; case string
+; snake case
+^+n::
+  Selection := GetSelection()
+  SelectionSnake := SnakeCase(Selection)
+
+  ; toggle
+  if (Selection == SelectionSnake) {
+    ReplaceSelection(SpaceCase(Selection))
+  }
+  else {
+    ReplaceSelection(SelectionSnake)
+  }
+
+Return
+
+; kebab-case
+^+k::
+  Selection := GetSelection()
+  SelectionKebab := KebabCase(Selection)
+
+  ; toggle
+  if (Selection == SelectionKebab) {
+    ReplaceSelection(SpaceCase(Selection))
+  }
+  else {
+    ReplaceSelection(SelectionKebab)
+  }
+
+Return
+
+; intra-word case
 
 LowerCase(String) {
   StringLower, StringCased, % String
@@ -70,6 +120,23 @@ WordCase(String) {
 UpperCase(String) {
   StringUpper, StringCased, % String
   Return StringCased
+}
+
+; inter-word case
+
+SpaceCase(String) {
+  String := StrReplace(String, "_", " ")
+  Return StrReplace(String, "-", " ")
+}
+
+SnakeCase(String) {
+  String := StrReplace(String, " ", "_")
+  Return StrReplace(String, "-", "_")
+}
+
+KebabCase(String) {
+  String := StrReplace(String, " ", "-")
+  Return StrReplace(String, "_", "-")
 }
 
 ; tools
