@@ -4,22 +4,22 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ^j::
-   Send, Hello World
+  Send, Hello World
 Return
 
 ^k::
-   MsgBox, Hello World
+  MsgBox, Hello World
 Return
 
 esc::
-   MsgBox, Escape!
+  MsgBox, Escape!
 Return
 
 ::btw::
-   MsgBox, You typed "btw".
+  MsgBox, You typed "btw".
 Return
 
 ^b::
-   Send, {ctrl down}c{ctrl up}
-   SendInput, [b]{ctrl down}v{ctrl up}[/b]
+  Send, {ctrl down}c{ctrl up}
+  SendInput, [b]{ctrl down}v{ctrl up}[/b]
 Return
