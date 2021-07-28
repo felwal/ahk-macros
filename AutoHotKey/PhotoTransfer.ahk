@@ -1,37 +1,32 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+SendMode, Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir, % A_ScriptDir  ; Ensures a consistent starting directory.
 
-source = E:\DCIM\100NCD60\*.jpg
-toType = *
-reDestination = H:\Photographs\year\year-month
-reName = date-time
+Source := "E:\DCIM\100NCD60\*.jpg"
+ToType := "*"
+ReDestination := "H:\Photographs\year\year-month"
+ReName := "date-time"
 
 ; gui
 Gui, +AlwaysOnTop +LabelPhotoTransfer +ToolWindow -MinimizeBox -SysMenu
 Gui, Color, White
 Gui, Font,, Segoe UI
-Gui, Add, Button, x200 y167 w75 h23,  Cancel
-Gui, Add, Button, x117 y167 w75 h23,  Transfer
-Gui, Show, h200 w290,            Photo Transfer
+Gui, Add, Button, x200 y167 w75 h23, % "Cancel"
+Gui, Add, Button, x117 y167 w75 h23, % "Transfer"
+Gui, Show, h200 w290, % "Photo Transfer"
 
 ; text
-Gui, Add, Text, x20 y10 w120 h20,  Source
-Gui, Add, Text, x20 y40 w120 h20,  Destination
-Gui, Add, Text, x20 y70 w120 h20,  Name
-Gui, Add, Text, x20 y100 w120 h20,  Convert to
+Gui, Add, Text, x20 y10 w120 h20, % "Source"
+Gui, Add, Text, x20 y40 w120 h20, % "Destination"
+Gui, Add, Text, x20 y70 w120 h20, % "Name"
+Gui, Add, Text, x20 y100 w120 h20, % "Convert to"
 
 ; inputs
-Gui, Add, Edit, x100 y10 w174 h20 vsource,      %source%
-Gui, Add, Edit, x100 y40 w174 h20 vreDestination,  %reDestination%
-Gui, Add, Edit, x100 y70 w174 h20 vreName,      date-time
-Gui, Add, Edit, x100 y100 w40 h20 vtoType,      %toType%
-
-;Gui, Add, DropDownList, x100 y10 w174 h100 vsource,       %source%
-;Gui, Add, DropDownList, x100 y40 w174 h100 vreDestination,  %reDestination%
-;Gui, Add, DropDownList, x100 y70 w174 h100 vreName,       date-time|date
-;Gui, Add, DropDownList, x100 y100 w56 h100 vtoType,       jpg|NEF|png|pdn
+Gui, Add, Edit, x100 y10 w174 h20 vSource, % Source
+Gui, Add, Edit, x100 y40 w174 h20 vReDestination, % ReDestination
+Gui, Add, Edit, x100 y70 w174 h20 vReName, % "date-time"
+Gui, Add, Edit, x100 y100 w40 h20 vToType, % ToType
 
 Return ; end of auto-execute
 
@@ -41,53 +36,58 @@ ExitApp
 
 ButtonTransfer:
 Gui, Submit
-Loop, %source% {
+
+Loop, % Source {
   ; format time
-  FileGetTime,      dateAndTime,  %source%, M
-  FormatTime, date,   %dateAndTime%, yyyyMMdd
-  FormatTime, time,   %dateAndTime%, HHmmss
-  FormatTime, year,   %dateAndTime%, yyyy
-  FormatTime, month,  %dateAndTime%, MM
+  FileGetTime, DateAndTime, % Source, % "M"
+  FormatTime, Date, % DateAndTime, % "yyyyMMdd"
+  FormatTime, Time, % DateAndTime, % "HHmmss"
+  FormatTime, Year, % DateAndTime, % "yyyy"
+  FormatTime, Month, % DateAndTime, % "MM"
 
   ; read inputs
-  if reDestination = H:\Photographs\year\year-month {
-    destination = H:\Photographs\%year%\%year%-%month%
+  if (ReDestination = "H:\Photographs\year\year-month") {
+    Destination := "H:\Photographs\" Year "\" Year "-" Month
   }
   else {
-    destination = %reDestination%
+    Destination := ReDestination
   }
 
   ; set name
-  if reName = date-time {
-    name = %date%-%time%
+  if (ReName = "date-time") {
+    Name := Date "-" Time
   }
-  else if reName = date {
-    name = %date%
+  else if (ReName = "date") {
+    Name := Date
   }
   else {
-    name = %rename%
+    Name := ReName
   }
 
   ; create dir
-  ifNotExist, %destination% {
-    FileCreateDir, %destination%
+  if (!FileExist(Destination)) {
+    FileCreateDir, % Destination
   }
 
   ; move file
-  ifExist, %destination%\%name%.%toType% {
-    increment = 1
+  File := Destination "\" Name "." ToType
+  if (FileExist(File)) {
+    Increment = 1
+    
     Loop {
-      ifExist %destination%\%name% (%increment%).%toType% {
-        increment++
+      File := Destination "\" Name " (" Increment ")." ToType
+
+      if (FileExist(File)) {
+        Increment++
       }
       else {
-        FileMove, %source%, %destination%\%name% (%increment%).%toType%
+        FileMove, % Source, % File
         Break
       }
     }
   }
   else {
-    FileMove, %source%, %destination%\%name%.%toType%
+    FileMove, % Source, % File
   }
 }
 
