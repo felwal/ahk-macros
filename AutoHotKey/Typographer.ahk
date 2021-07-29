@@ -8,6 +8,7 @@ Suspend ; suspend by default
 
 ; meta
 
+; toggle suspension
 F1 & w::
   Suspend, Toggle
 Return
@@ -20,6 +21,7 @@ Return
 :*?:---::—
 ::--::–
 ;:*?:...::…
+:*:***::* * *
 
 ; citation
 ;:*:"::””{Left}
