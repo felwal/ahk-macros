@@ -1,10 +1,10 @@
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
+#NoEnv ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn ; Enable warnings to assist with detecting common errors.
 #SingleInstance, Force
-SendMode, Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir, % A_ScriptDir  ; Ensures a consistent starting directory.
+SendMode, Input ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 
-; hotkeys
+; toggle cases
 
 ; toggle writing cases
 ^+t::
@@ -62,6 +62,8 @@ Return
 
 Return
 
+; convert to writing cases
+
 ; lower case
 ^+l::
   ReplaceSelection(LowerCase(GetSelection()))
@@ -81,6 +83,8 @@ Return
 ^+u::
   ReplaceSelection(UpperCase(GetSelection()))
 Return
+
+; convert to coding cases
 
 ; kebab-case
 ^+k::
@@ -267,9 +271,9 @@ GetSelection() {
 
 ReplaceSelection(Replacement) {
   ; paste
-  Send, %Replacement%
+  Send, % Replacement
 
   ; reselect
   Len := Strlen(Replacement)
-  Send +{left %Len%}
+  Send, +{Left %Len%}
 }
