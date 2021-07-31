@@ -6,12 +6,9 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 
 ; run shortcuts in autostart folder
 
-Folder := "autostart"
-File := Folder "\*.lnk"
-
-Loop, % File {
-  Run, % A_LoopFileName, % Folder
-}
+Run, % "Commands.ahk"
+Run, % "Typographer.ahk"
+Run, % "CaseConverter.ahk"
 
 Return ; end of auto-execute
 
