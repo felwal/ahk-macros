@@ -49,6 +49,7 @@ Return
 :*:&***::⁂
 :*:&fleuron::❦
 :*:&leaf::❦
+:*:&rfleuron::❧
 :*:&rleaf::❧
 :*:&curren::¤
 :*:&dagger::†
