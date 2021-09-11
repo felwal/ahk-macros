@@ -5,7 +5,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 
 Source := "E:\DCIM\100NCD60\*.jpg"
 ToType := "*"
-ReDestination := "H:\Photographs\year\year-month"
+ReDestination := "H:\Photographs"
 ReName := "date-time"
 
 ; gui
@@ -45,15 +45,10 @@ Loop, % Source {
   FormatTime, Year, % DateAndTime, % "yyyy"
   FormatTime, Month, % DateAndTime, % "MM"
 
-  ; read inputs
-  if (ReDestination = "H:\Photographs\year\year-month") {
-    Destination := "H:\Photographs\" Year "\" Year "-" Month
-  }
-  else {
-    Destination := ReDestination
-  }
+  ; read destination
+  Destination := ReDestination "\" Year "\" Year "-" Month
 
-  ; set name
+  ; read name
   if (ReName = "date-time") {
     Name := Date "-" Time
   }
@@ -73,7 +68,7 @@ Loop, % Source {
   File := Destination "\" Name "." ToType
   if (FileExist(File)) {
     Increment = 1
-    
+
     Loop {
       File := Destination "\" Name " (" Increment ")." ToType
 
