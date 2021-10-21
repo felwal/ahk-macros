@@ -33,18 +33,25 @@ Return
 ***REMOVED***
 ***REMOVED***
 
-; coding
+; xml
 :*b0:<!::--  -->{Left 4}
+
+; markdown
 :*:mdsum::[summary]: {#} ""{Left}
+
+; python
+:*b0:def main():::{Enter}pass{Enter 2}{BackSpace}if __name__ == "__main__":{Enter}{Tab}main()
 
 ; punctuation
 :*:&nbsp:: 
 :*:&thinsp:: 
 :*:&hairsp:: 
-:*:&ndash::–
-::&--::–
 :*:&mdash::—
 ::&---::—
+:*?:---::—
+:*:&ndash::–
+::&--::–
+::--::–
 :*:&tilde::"~"
 :*:&!?::‽
 :*:&?!::‽
@@ -56,6 +63,7 @@ Return
 :*:&rfleuron::❧
 :*:&rleaf::❧
 :*:&curren::¤
+:*:&money::¤
 :*:&dagger::†
 :*:&ddagger::‡
 :*:&paragraph::¶
