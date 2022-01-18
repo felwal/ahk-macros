@@ -7,6 +7,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 ; run shortcuts in autostart folder
 
 Run, % "Commands.ahk"
+Run, % "Chars.ahk"
 Run, % "Typographer.ahk"
 Run, % "CaseConverter.ahk"
 
