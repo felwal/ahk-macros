@@ -14,7 +14,6 @@ Gui, Color, White
 Gui, Font,, Segoe UI
 Gui, Add, Button, x117 y167 w75 h23, % "Transfer"
 Gui, Add, Button, x200 y167 w75 h23, % "Cancel"
-Gui, Show, h200 w290, % "PhotoTransfer"
 
 ; text
 Gui, Add, Text, x20 y10 w120 h20, % "Source"
@@ -28,6 +27,8 @@ Gui, Add, Edit, x100 y40 w174 h20 vReDestination, % ReDestination
 Gui, Add, Edit, x100 y70 w174 h20 vReName, % "date-time"
 Gui, Add, Edit, x100 y100 w40 h20 vToType, % ToType
 
+Gui, Show, w290 h200, % "PhotoTransfer"
+
 Return ; end of auto-execute
 
 ButtonCancel:
@@ -36,6 +37,26 @@ ExitApp
 
 ButtonTransfer:
 Gui, Submit
+
+; run at maximum speed
+SetBatchLines, -1
+
+FileCount = 0
+
+; get file count
+Loop, % Source {
+  ; skip hidden, read-only and system files
+  if A_LoopFileAttrib contains H,R,S
+    continue
+  FileCount += 1
+}
+
+; progress bar gui
+Gui, New, +AlwaysOnTop +LabelPhotoTransferProgress +ToolWindow -MinimizeBox -SysMenu
+Gui, Add, Progress, x10 w200 h20 vProgressBar Range0-%FileCount%
+Gui, Add, Text, x10 y35 w200 h20 vProgressText, % "Preparing ..."
+Gui, Add, Button, x300 y70 w75 h23, % "Cancel"
+Gui, Show, w400 h108, % "PhotoTransfer in progress ..."
 
 Loop, % Source {
   ; format time
@@ -60,9 +81,8 @@ Loop, % Source {
   }
 
   ; create dir
-  if (!FileExist(Destination)) {
+  ifNotExist, % Destination
     FileCreateDir, % Destination
-  }
 
   ; move file
   File := Destination "\" Name "." ToType
@@ -84,6 +104,20 @@ Loop, % Source {
   else {
     FileMove, % Source, % File
   }
+
+  GuiControl,, ProgressBar, +1
+  GuiControl,, ProgressText, % "Moving item " A_Index "/" FileCount
 }
 
+Gui, Submit
+
+; finished gui
+Gui, New, +AlwaysOnTop +LabelPhoyoTransferFinished +ToolWindow -MinimizeBox -SysMenu
+Gui, Add, Text, x10 w200 h20, % "PhotoTransfer complete."
+Gui, Add, Button, x120 y45 w75 h23, % "Close"
+Gui, Show, w220 h80, % "PhotoTransfer"
+
+Return
+
+ButtonClose:
 ExitApp
