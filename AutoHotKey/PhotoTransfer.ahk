@@ -14,7 +14,7 @@ Gui, Color, White
 Gui, Font,, Segoe UI
 Gui, Add, Button, x200 y167 w75 h23, % "Cancel"
 Gui, Add, Button, x117 y167 w75 h23, % "Transfer"
-Gui, Show, h200 w290, % "Photo Transfer"
+Gui, Show, h200 w290, % "PhotoTransfer"
 
 ; text
 Gui, Add, Text, x20 y10 w120 h20, % "Source"
