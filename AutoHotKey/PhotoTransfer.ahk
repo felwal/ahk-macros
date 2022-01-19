@@ -12,8 +12,8 @@ ReName := "date-time"
 Gui, +AlwaysOnTop +LabelPhotoTransfer +ToolWindow -MinimizeBox -SysMenu
 Gui, Color, White
 Gui, Font,, Segoe UI
-Gui, Add, Button, x200 y167 w75 h23, % "Cancel"
 Gui, Add, Button, x117 y167 w75 h23, % "Transfer"
+Gui, Add, Button, x200 y167 w75 h23, % "Cancel"
 Gui, Show, h200 w290, % "PhotoTransfer"
 
 ; text

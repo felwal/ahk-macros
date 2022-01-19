@@ -16,5 +16,5 @@ Return ; end of auto-execute
 ; hotkeys
 
 #a::
-  Reload
+  Run, % "Master.ahk"
 Return
