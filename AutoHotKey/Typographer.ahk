@@ -19,6 +19,8 @@ Return
 
 ; punctuation
 ;:*?:...::…
+:*?: ...:: ... ; nbsp
+:*?: . . .:: . . . ; nbsp, nbthinsp
 :*:***::* * *
 
 ; citation
@@ -26,5 +28,5 @@ Return
 ;:*:'::’’{Left}
 ;:*:"::“”{Left}
 ;:*:'::‘’{Left}
-:*:"::»«{Left}
-:*:'::›‹{Left}
+;:*:"::»«{Left}
+;:*:'::›‹{Left}
