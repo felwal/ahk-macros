@@ -5,43 +5,65 @@ SendMode, Input ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 
 ; punctuation
-:*:&thinsp:: 
-:*:&hairsp:: 
+
+; space
+::&emsp::  ; m/1
+::&ensp::  ; m/2
+::&thicksp::  ; m/3
+::&nbsp::  ; m/4
+Ctrl & Space::  ; nbsp
+:*:&thinsp::  ; m/8
+:*:&nbthinsp::  ; m/8
+:*:&hairsp::  ; <m/8
+
+; dash
+:*:&emdash::—
 :*:&mdash::—
+:*:&ltank::—
 ::&---::—
 :*?:---::—
+:*:&endash::–
 :*:&ndash::–
+:*:&tank::–
 ::&--::–
 ::--::–
+
+;
 :*:&!?::‽
 :*:&?!::‽
-:*:&;::ː
+:*:&irony::؟
 :*:&...::…
 :*:&***::⁂
 :*:&fleuron::❦
 :*:&leaf::❦
 :*:&rfleuron::❧
 :*:&rleaf::❧
-:*:&curren::¤
-:*:&money::¤
 :*:&dagger::†
 :*:&ddagger::‡
 :*:&paragraph::¶
-:*:&tm::™
 :*:&bullet::•
-:*:&numero::№
+
+; parenthesis
 :*:&''::›‹{Left}
 :*:&><::›‹{Left}
 :*:&""::»«{Left}
 :*:&>><<::»«{Left}
 :*:&angle::⟨⟩{Left}
 :*:&()::⟨⟩{Left}
+:*:&<>::⟨⟩{Left}
 :*:&[]::〔〕{Left}
 :*:&[[]]::⟦⟧{Left}
-:*:&deg::°
-:*:&^*::°
+
+;
 
 ; misc
+:*:&deg::°
+:*:&^*::°
+:*:&curren::¤
+:*:&money::¤
+:*:&numero::№
+:*:&tm::™
+:*:&;::ː
 :*:&box::□
 :*:&square::□
 
