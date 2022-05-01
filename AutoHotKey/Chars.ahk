@@ -44,9 +44,9 @@ Ctrl & Space::  ; nbsp
 :*:&bullet::•
 
 ; parenthesis
-:*:&''::›‹{Left}
+:*:&''::‘’{Left}
 :*:&><::›‹{Left}
-:*:&""::»«{Left}
+:*:&""::“”{Left}
 :*:&>><<::»«{Left}
 :*:&angle::⟨⟩{Left}
 :*:&()::⟨⟩{Left}
