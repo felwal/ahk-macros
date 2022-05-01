@@ -8,6 +8,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 
 Run, % "Shortcuts.ahk"
 Run, % "Abbreviations.ahk"
+Run, % "SpacedWords.ahk"
 Run, % "Chars.ahk"
 Run, % "Typographer.ahk"
 Run, % "CaseConverter.ahk"
