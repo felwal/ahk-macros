@@ -4,18 +4,31 @@
 SendMode, Input ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 
-; run shortcuts in autostart folder
+; multilang
+::alt::alt.
 
-Run, % "Shortcuts.ahk"
-Run, % "Abbreviations.ahk"
-Run, % "Chars.ahk"
-Run, % "Typographer.ahk"
-Run, % "CaseConverter.ahk"
+; swedish
+::tex::t.ex.
+::tom::t.o.m.
+::pga::p.g.a.
+::etc::etc.
+::bla::bl.a.
+::anm::anm.
+::dvs::dvs.
+::ev::ev.
+::mm::m.m.
+::mvh::m.v.h.
+::mha::m.h.a.
+::obs::obs.
+::resp::resp.
+::exkl::exkl.
+::inkl::inkl.
+::fkr::f.Kr.
+::ekr::e.Kr.
 
-Return ; end of auto-execute
-
-; hotkeys
-
-#a::
-  Run, % "Master.ahk"
-Return
+; english
+::ie::i.e.
+::eg::e.g.
+::aka::a.k.a.
+::excl::excl.
+::incl::incl.
