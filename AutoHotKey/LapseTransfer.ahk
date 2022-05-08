@@ -35,65 +35,67 @@ Gui, Show, w290 h200, % "LapseTransfer"
 Return ; end of auto-execute
 
 ButtonCancel:
+  ExitApp
+
 GuiClose:
-ExitApp
+  ExitApp
 
 ButtonTransfer:
-Gui, Submit
+  Gui, Submit
 
-; run at maximum speed
-SetBatchLines, -1
-
-File := Source "\*." Type
-FileCount = 0
-
-; get file count
-Loop, % File {
-  ; skip hidden, read-only and system files
-  if A_LoopFileAttrib contains H,R,S || A_LoopFileExt != %Type%
-    continue
-  FileCount += 1
-}
-
-; progress bar gui
-Gui, New, +AlwaysOnTop +LabelLapseTransferProgress +ToolWindow -MinimizeBox -SysMenu
-Gui, Add, Progress, x10 w200 h20 vProgressBar Range0-%FileCount%
-Gui, Add, Text, x10 y35 w200 h20 vProgressText, % "Preparing ..."
-Gui, Add, Button, x300 y70 w75 h23, % "Cancel"
-Gui, Show, w400 h108, % "LapseTransfer in progress ..."
-
-; create dir
-ifNotExist, % Destination
-  FileCreateDir, % destination
-
-Digits := StrLen(FileCount + StartDigit)
-Iterator := StartDigit
-
-; move and rename files
-Loop, % File {
-  Postfix := Iterator
-  Zeros := Digits - StrLen(Iterator)
-
-  Loop, % Zeros {
-    Postfix := "0" Postfix
+  ; run at maximum speed
+  SetBatchLines, -1
+  
+  File := Source "\*." Type
+  FileCount = 0
+  
+  ; get file count
+  Loop, % File {
+    ; skip hidden, read-only and system files
+    if A_LoopFileAttrib contains H,R,S || A_LoopFileExt != %Type%
+      continue
+    FileCount += 1
   }
-
-  ; move
-  FileMove, % File, % Destination "\" Prefix "-" Postfix ".*"
-  Iterator++
-  GuiControl,, ProgressBar, +1
-  GuiControl,, ProgressText, % "Moving item " A_Index "/" FileCount
-}
-
-Gui, Submit
-
-; finished gui
-Gui, New, +AlwaysOnTop +LabelLapseTransferFinished +ToolWindow -MinimizeBox -SysMenu
-Gui, Add, Text, x10 w200 h20, % "LapseTransfer complete."
-Gui, Add, Button, x120 y45 w75 h23, % "Close"
-Gui, Show, w220 h80, % "LapseTransfer"
-
-Return
+  
+  ; progress bar gui
+  Gui, New, +AlwaysOnTop +LabelLapseTransferProgress +ToolWindow -MinimizeBox -SysMenu
+  Gui, Add, Progress, x10 w200 h20 vProgressBar Range0-%FileCount%
+  Gui, Add, Text, x10 y35 w200 h20 vProgressText, % "Preparing ..."
+  Gui, Add, Button, x300 y70 w75 h23, % "Cancel"
+  Gui, Show, w400 h108, % "LapseTransfer in progress ..."
+  
+  ; create dir
+  ifNotExist, % Destination
+    FileCreateDir, % destination
+  
+  Digits := StrLen(FileCount + StartDigit)
+  Iterator := StartDigit
+  
+  ; move and rename files
+  Loop, % File {
+    Postfix := Iterator
+    Zeros := Digits - StrLen(Iterator)
+  
+    Loop, % Zeros {
+      Postfix := "0" Postfix
+    }
+  
+    ; move
+    FileMove, % File, % Destination "\" Prefix "-" Postfix ".*"
+    Iterator++
+    GuiControl,, ProgressBar, +1
+    GuiControl,, ProgressText, % "Moving item " A_Index "/" FileCount
+  }
+  
+  Gui, Submit
+  
+  ; finished gui
+  Gui, New, +AlwaysOnTop +LabelLapseTransferFinished +ToolWindow -MinimizeBox -SysMenu
+  Gui, Add, Text, x10 w200 h20, % "LapseTransfer complete."
+  Gui, Add, Button, x120 y45 w75 h23, % "Close"
+  Gui, Show, w220 h80, % "LapseTransfer"
+  
+  Return
 
 ButtonClose:
-ExitApp
+  ExitApp

@@ -32,33 +32,35 @@ Gui, Add, Button, x200 y190 w75 h20 gRunAutoStart, % "Run"
 Return ; end of auto-execute
 
 ButtonClose:
+  ExitApp
+  
 GuiClose:
-ExitApp
+  ExitApp
 
 RunCommands:
-Run, % "Commands.ahk"
-Return
+  Run, % "Commands.ahk"
+  Return
 
 RunChars:
-Run, % "Chars.ahk"
-Return
+  Run, % "Chars.ahk"
+  Return
 
 RunTypographer:
-Run, % "Typographer.ahk"
-Return
+  Run, % "Typographer.ahk"
+  Return
 
 RunCaseConverter:
-Run, % "CaseConverter.ahk"
-Return
+  Run, % "CaseConverter.ahk"
+  Return
 
 RunPhotoTransfer:
-Run, % "PhotoTransfer.ahk"
-Return
+  Run, % "PhotoTransfer.ahk"
+  Return
 
 RunLapseTransfer:
-Run, % "LapseTransfer.ahk"
-Return
+  Run, % "LapseTransfer.ahk"
+  Return
 
 RunAutoStart:
-Run, % "AutoStart.ahk"
-Return
+  Run, % "AutoStart.ahk"
+  Return

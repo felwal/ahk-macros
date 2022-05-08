@@ -32,92 +32,94 @@ Gui, Show, w290 h200, % "PhotoTransfer"
 Return ; end of auto-execute
 
 ButtonCancel:
+  ExitApp
+
 GuiClose:
-ExitApp
+  ExitApp
 
 ButtonTransfer:
-Gui, Submit
+  Gui, Submit
 
-; run at maximum speed
-SetBatchLines, -1
-
-FileCount = 0
-
-; get file count
-Loop, % Source {
-  ; skip hidden, read-only and system files
-  if A_LoopFileAttrib contains H,R,S
-    continue
-  FileCount += 1
-}
-
-; progress bar gui
-Gui, New, +AlwaysOnTop +LabelPhotoTransferProgress +ToolWindow -MinimizeBox -SysMenu
-Gui, Add, Progress, x10 w200 h20 vProgressBar Range0-%FileCount%
-Gui, Add, Text, x10 y35 w200 h20 vProgressText, % "Preparing ..."
-Gui, Add, Button, x300 y70 w75 h23, % "Cancel"
-Gui, Show, w400 h108, % "PhotoTransfer in progress ..."
-
-Loop, % Source {
-  ; format time
-  FileGetTime, DateAndTime, % Source, % "M"
-  FormatTime, Date, % DateAndTime, % "yyyyMMdd"
-  FormatTime, Time, % DateAndTime, % "HHmmss"
-  FormatTime, Year, % DateAndTime, % "yyyy"
-  FormatTime, Month, % DateAndTime, % "MM"
-
-  ; read destination
-  Destination := ReDestination "\" Year "\" Year "-" Month
-
-  ; read name
-  if (ReName = "date-time") {
-    Name := Date "-" Time
+  ; run at maximum speed
+  SetBatchLines, -1
+  
+  FileCount = 0
+  
+  ; get file count
+  Loop, % Source {
+    ; skip hidden, read-only and system files
+    if A_LoopFileAttrib contains H,R,S
+      continue
+    FileCount += 1
   }
-  else if (ReName = "date") {
-    Name := Date
-  }
-  else {
-    Name := ReName
-  }
-
-  ; create dir
-  ifNotExist, % Destination
-    FileCreateDir, % Destination
-
-  ; move file
-  File := Destination "\" Name "." ToType
-  if (FileExist(File)) {
-    Increment = 1
-
-    Loop {
-      File := Destination "\" Name " (" Increment ")." ToType
-
-      if (FileExist(File)) {
-        Increment++
-      }
-      else {
-        FileMove, % Source, % File
-        Break
+  
+  ; progress bar gui
+  Gui, New, +AlwaysOnTop +LabelPhotoTransferProgress +ToolWindow -MinimizeBox -SysMenu
+  Gui, Add, Progress, x10 w200 h20 vProgressBar Range0-%FileCount%
+  Gui, Add, Text, x10 y35 w200 h20 vProgressText, % "Preparing ..."
+  Gui, Add, Button, x300 y70 w75 h23, % "Cancel"
+  Gui, Show, w400 h108, % "PhotoTransfer in progress ..."
+  
+  Loop, % Source {
+    ; format time
+    FileGetTime, DateAndTime, % Source, % "M"
+    FormatTime, Date, % DateAndTime, % "yyyyMMdd"
+    FormatTime, Time, % DateAndTime, % "HHmmss"
+    FormatTime, Year, % DateAndTime, % "yyyy"
+    FormatTime, Month, % DateAndTime, % "MM"
+  
+    ; read destination
+    Destination := ReDestination "\" Year "\" Year "-" Month
+  
+    ; read name
+    if (ReName = "date-time") {
+      Name := Date "-" Time
+    }
+    else if (ReName = "date") {
+      Name := Date
+    }
+    else {
+      Name := ReName
+    }
+  
+    ; create dir
+    ifNotExist, % Destination
+      FileCreateDir, % Destination
+  
+    ; move file
+    File := Destination "\" Name "." ToType
+    if (FileExist(File)) {
+      Increment = 1
+  
+      Loop {
+        File := Destination "\" Name " (" Increment ")." ToType
+  
+        if (FileExist(File)) {
+          Increment++
+        }
+        else {
+          FileMove, % Source, % File
+          Break
+        }
       }
     }
+    else {
+      FileMove, % Source, % File
+    }
+  
+    GuiControl,, ProgressBar, +1
+    GuiControl,, ProgressText, % "Moving item " A_Index "/" FileCount
   }
-  else {
-    FileMove, % Source, % File
-  }
-
-  GuiControl,, ProgressBar, +1
-  GuiControl,, ProgressText, % "Moving item " A_Index "/" FileCount
-}
-
-Gui, Submit
-
-; finished gui
-Gui, New, +AlwaysOnTop +LabelPhoyoTransferFinished +ToolWindow -MinimizeBox -SysMenu
-Gui, Add, Text, x10 w200 h20, % "PhotoTransfer complete."
-Gui, Add, Button, x120 y45 w75 h23, % "Close"
-Gui, Show, w220 h80, % "PhotoTransfer"
-
-Return
+  
+  Gui, Submit
+  
+  ; finished gui
+  Gui, New, +AlwaysOnTop +LabelPhoyoTransferFinished +ToolWindow -MinimizeBox -SysMenu
+  Gui, Add, Text, x10 w200 h20, % "PhotoTransfer complete."
+  Gui, Add, Button, x120 y45 w75 h23, % "Close"
+  Gui, Show, w220 h80, % "PhotoTransfer"
+  
+  Return
 
 ButtonClose:
-ExitApp
+  ExitApp

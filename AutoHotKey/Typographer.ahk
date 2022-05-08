@@ -11,11 +11,11 @@ Suspend ; suspend by default
 ; toggle suspension
 F1 & w::
   Suspend, Toggle
-Return
+  Return
 
 F1::
   Send, {F1}
-Return
+  Return
 
 ; punctuation
 ;:*?:...::…

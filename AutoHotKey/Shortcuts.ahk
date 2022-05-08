@@ -9,15 +9,15 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 ; toggle script
 F1::
   Suspend, Toggle
-Return
+  Return
 
 ; disable insert
 Insert::
-Return
+  Return
 
 ; hotstrings
 
-; expand personal abbreviations
+; personal
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***

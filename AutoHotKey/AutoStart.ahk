@@ -19,4 +19,4 @@ Return ; end of auto-execute
 
 #a::
   Run, % "Master.ahk"
-Return
+  Return

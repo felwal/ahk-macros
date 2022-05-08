@@ -4,7 +4,7 @@
 SendMode, Input ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 
-; toggle cases
+; toggle cases (ctrl+shift)
 
 ; toggle writing cases
 ^+t::
@@ -28,7 +28,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
     ReplaceSelection(SelectionLower)
   }
 
-Return
+  Return
 
 ; toggle coding cases
 ^+m::
@@ -60,29 +60,29 @@ Return
     ReplaceSelection(SelectionSpace)
   }
 
-Return
+  Return
 
 ; convert to writing cases
 
 ; lower case
 ^+l::
   ReplaceSelection(LowerCase(GetSelection()))
-Return
+  Return
 
 ; Sentence case
 ^+s::
   ReplaceSelection(SentenceCase(GetSelection()))
-Return
+  Return
 
 ; Word Case
 ^+w::
   ReplaceSelection(WordCase(GetSelection()))
-Return
+  Return
 
 ; UPPER CASE
 ^+u::
   ReplaceSelection(UpperCase(GetSelection()))
-Return
+  Return
 
 ; convert to coding cases
 
@@ -99,7 +99,7 @@ Return
     ReplaceSelection(SelectionKebab)
   }
 
-Return
+  Return
 
 ; snake case
 ^+n::
@@ -114,22 +114,22 @@ Return
     ReplaceSelection(SelectionSnake)
   }
 
-Return
+  Return
 
 ; camelCase
 ^+c::
   ReplaceSelection(CamelCase(GetSelection()))
-Return
+  Return
 
 ; PascalCase
 ^+p::
   ReplaceSelection(PascalCase(GetSelection()))
-Return
+  Return
 
 ; CAP_CASE
 ^+q::
   ReplaceSelection(CapCase(GetSelection()))
-Return
+  Return
 
 ; writing cases
 
