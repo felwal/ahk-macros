@@ -1,7 +1,0 @@
-{
-    "editor.trimAutoWhitespace": false,
-    "[markdown]": {
-        "editor.tabSize": 4,
-        "editor.wrappingIndent": "same"
-    }
-}
