@@ -7,6 +7,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 ; space
 
 /*
+::alltför::allt för
 ::försent::för sent
 
 ::idag::i dag
@@ -29,6 +30,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 
 ; unspace
 
+::allt för::alltför
 ::för sent::försent
 
 ::i dag::idag
