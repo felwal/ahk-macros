@@ -17,15 +17,6 @@ Insert::
 
 ; hotstrings
 
-; personal
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-
 ; xml
 :*b0:<!::--  -->{Left 4}
 
