@@ -1,3 +1,5 @@
 {
+    // neccessary to not trim the different types
+    // of spaces in `Chars.ahk`
     "files.trimTrailingWhitespace": false
 }
