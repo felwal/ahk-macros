@@ -41,13 +41,16 @@ Ctrl & Space::  ; nbsp
 :*:&dagger::†
 :*:&ddagger::‡
 :*:&paragraph::¶
+:*:&pilcrow::¶
 :*:&bullet::•
 
-; parenthesis
+; quotation
 :*:&''::‘’{Left}
-:*:&><::›‹{Left}
 :*:&""::“”{Left}
+:*:&><::›‹{Left}
 :*:&>><<::»«{Left}
+
+; parenthesis
 :*:&angle::⟨⟩{Left}
 :*:&()::⟨⟩{Left}
 :*:&<>::⟨⟩{Left}
@@ -136,6 +139,12 @@ Ctrl & Space::  ; nbsp
 :*:&therefore::∴
 :*:&because::∵
 
+; german
+:C*:&eszett::ß
+:C*:&sharps::ß
+:C*:&Eszett::ẞ
+:C*:&Sharps::ẞ
+
 ; greek
 :*:&alpha::α
 :*:&beta::β
@@ -172,31 +181,3 @@ Ctrl & Space::  ; nbsp
 ; hebrew
 :*:&aleph::ℵ
 :*:&beth::ב
-
-; overline
-:*:&olinea::a̅
-:*:&olineb::b̅
-:*:&olinec::c̅
-:*:&olined::d̅
-:*:&olinee::e̅
-:*:&olinef::f̅
-:*:&olineg::g̅
-:*:&olineh::h̅
-:*:&olinei::i̅
-:*:&olinej::j̅
-:*:&olinek::k̅
-:*:&olinel::l̅
-:*:&olinem::m̅
-:*:&olinen::n̅
-:*:&olineo::o̅
-:*:&olinep::p̅
-:*:&olineq::q̅
-:*:&oliner::r̅
-:*:&olines::s̅
-:*:&olinet::t̅
-:*:&olineu::u̅
-:*:&olinev::v̅
-:*:&olinew::w̅
-:*:&olinex::x̅
-:*:&oliney::y̅
-:*:&olinez::z̅
