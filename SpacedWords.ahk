@@ -10,6 +10,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 ::alltför::allt för
 ::försent::för sent
 
+::iallafall::i alla fall
 ::idag::i dag
 ::ifatt::i fatt
 ::ifjol::i fjol
@@ -33,6 +34,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 ::allt för::alltför
 ::för sent::försent
 
+::i alla fall:: iallafall
 ::i dag::idag
 ::i fatt::ifatt
 ::i fjol::ifjol

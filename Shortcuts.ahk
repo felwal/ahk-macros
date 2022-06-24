@@ -17,11 +17,23 @@ Insert::
 
 ; hotstrings
 
+;
+::js::javascript
+
 ; xml
 :*b0:<!::--  -->{Left 4}
 
 ; markdown
 :*:mdsum::[summary]: {#} ""{Left}
+:*:mdcode::``````{Enter 2}````````{BackSpace}{Left 5}
+:*:mdfm::---{Enter 2}---{Left 4}
+:*:mdali::---{Enter}aliases: []{Enter}---{Enter}{Left 6}
+:*:mdtags::---{Enter}tags: []{Enter}---{Enter}{Left 6}
 
 ; python
 :*b0:def main():::{Enter}pass{Enter 2}{BackSpace}if __name__ == "__main__":{Enter}{Tab}main()
+
+; temp
+;:*:d::{Delete}{Space}
+;:*:d::_
+;:*:d::{Backspace}{Enter}-{Space}{Esc 2}{Up}{Backspace}

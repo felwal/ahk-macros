@@ -15,6 +15,7 @@ Ctrl & Space::  ; nbsp
 :*:&thinsp::  ; m/8
 :*:&nbthinsp::  ; m/8
 :*:&hairsp::  ; <m/8
+:*:&tab::"	"
 
 ; dash
 :*:&emdash::—
@@ -42,6 +43,7 @@ Ctrl & Space::  ; nbsp
 :*:&ddagger::‡
 :*:&paragraph::¶
 :*:&pilcrow::¶
+:*:&section::§
 :*:&bullet::•
 
 ; quotation
