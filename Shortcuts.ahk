@@ -26,9 +26,10 @@ Insert::
 ; markdown
 :*:mdsum::[summary]: {#} ""{Left}
 :*:mdcode::``````{Enter 2}````````{BackSpace}{Left 5}
-:*:mdfm::---{Enter 2}---{Left 4}
+:*:mdfm::---{Enter 2}---{Enter}{Left 5}
 :*:mdali::---{Enter}aliases: []{Enter}---{Enter}{Left 6}
 :*:mdtags::---{Enter}tags: []{Enter}---{Enter}{Left 6}
+:*:wp::%% Waypoint %%
 
 ; python
 :*b0:def main():::{Enter}pass{Enter 2}{BackSpace}if __name__ == "__main__":{Enter}{Tab}main()
