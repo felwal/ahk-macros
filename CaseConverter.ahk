@@ -122,9 +122,9 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
   Return
 
 ; PascalCase
-^+p::
-  ReplaceSelection(PascalCase(GetSelection()))
-  Return
+;^+p::
+;  ReplaceSelection(PascalCase(GetSelection()))
+;  Return
 
 ; CAP_CASE
 ^+q::

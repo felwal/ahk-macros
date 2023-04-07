@@ -142,6 +142,17 @@ Ctrl & Space::  ; nbsp
 :*:&therefore::∴
 :*:&because::∵
 
+; nordic
+:*:&dh::ð
+:*:&edh::ð
+:*:&th::þ
+:*:&thorn::þ
+:*:&ae::æ
+:*:&ash::æ
+:*:&oe::œ
+:*:&ethel::œ
+:*:&ö::ø
+
 ; german
 :C*:&eszett::ß
 :C*:&sharps::ß

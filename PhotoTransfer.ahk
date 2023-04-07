@@ -3,9 +3,9 @@
 SendMode, Input ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 
-Source := "E:\DCIM\100NCD60\*.jpg"
+Source := "D:\DCIM\100NCD60\*.jpg"
 ToType := "*"
-ReDestination := "H:\Photographs"
+ReDestination := "E:\Photographs"
 ReName := "date-time"
 
 ; gui

@@ -21,7 +21,7 @@ Insert::
 ::js::javascript
 
 ; xml
-:*b0:<!::--  -->{Left 4}
+;:*b0:<!::--  -->{Left 4}
 
 ; markdown
 :*:mdsum::[summary]: {#} ""{Left}
@@ -29,7 +29,6 @@ Insert::
 :*:mdfm::---{Enter 2}---{Enter}{Left 5}
 :*:mdali::---{Enter}aliases: []{Enter}---{Enter}{Left 6}
 :*:mdtags::---{Enter}tags: []{Enter}---{Enter}{Left 6}
-:*:wp::%% Waypoint %%
 
 ; python
 :*b0:def main():::{Enter}pass{Enter 2}{BackSpace}if __name__ == "__main__":{Enter}{Tab}main()
