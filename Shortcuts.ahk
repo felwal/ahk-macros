@@ -19,9 +19,13 @@ Insert::
 
 ;
 ::js::javascript
+::anst::android studio
+::ciq::connect iq
+::giq::garmin iq
+::gciq::garmin connect iq
 
 ; xml
-;:*b0:<!::--  -->{Left 4}
+:*b0:<!::--  -->{Left 4}
 
 ; markdown
 :*:mdsum::[summary]: {#} ""{Left}
@@ -31,7 +35,7 @@ Insert::
 :*:mdtags::---{Enter}tags: []{Enter}---{Enter}{Left 6}
 
 ; python
-:*b0:def main():::{Enter}pass{Enter 2}{BackSpace}if __name__ == "__main__":{Enter}{Tab}main()
+:*b0:def main():::{Enter}{Tab}pass{Enter 2}{BackSpace}if __name__ == "__main__":{Enter}{Tab}main()
 
 ; temp
 ;:*:d::{Delete}{Space}
