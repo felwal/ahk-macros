@@ -107,6 +107,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :*:&!=::≠
 :*:&approx::≈
 :*:&~=::≈
+:*:&=::≈
 :*:&prop::∝
 :*:&congruent::≡
 :*:&subset::⊆
@@ -115,7 +116,9 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :*:&complement::∁
 :*:&union::∪
 :*:&intersect::∩
+:*:&snitt::∩
 :*:&empty::∅
+:*:&tom::∅
 :*:&parallell::∥
 :*:&perp::⊥
 :*:&_|_::⊥
@@ -125,6 +128,8 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :*:&<=>::⇔
 :*:&->::→
 :*:&<-::←
+:*:&up::↑
+:*:&down::↓
 :*:&|->::↦
 :*:&natural::ℕ
 :*:&integer::ℤ
