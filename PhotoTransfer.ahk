@@ -60,7 +60,7 @@ ButtonTransfer:
   Gui, Add, Button, x300 y70 w75 h23, % "Cancel"
   Gui, Show, w400 h108, % "PhotoTransfer in progress ..."
   
-  Loop, % Source {
+  Loop, % Source, 0, 1
     ; format time
     FileGetTime, DateAndTime, % Source, % "M"
     FormatTime, Date, % DateAndTime, % "yyyyMMdd"
@@ -72,15 +72,16 @@ ButtonTransfer:
     Destination := ReDestination "\" Year "\" Year "-" Month
   
     ; read name
-    if (ReName = "date-time") {
-      Name := Date "-" Time
-    }
-    else if (ReName = "date") {
-      Name := Date
-    }
-    else {
-      Name := ReName
-    }
+    Name := Date "-" Time
+    ;if (ReName = "date-time") {
+    ;  Name := Date "-" Time
+    ;}
+    ;else if (ReName = "date") {
+    ;  Name := Date
+    ;}
+    ;else {
+    ;  Name := ReName
+    ;}
   
     ; create dir
     ifNotExist, % Destination
@@ -109,8 +110,7 @@ ButtonTransfer:
   
     GuiControl,, ProgressBar, +1
     GuiControl,, ProgressText, % "Moving item " A_Index "/" FileCount
-  }
-  
+
   Gui, Submit
   
   ; finished gui
