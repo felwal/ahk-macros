@@ -18,6 +18,10 @@ Insert::
 ; hotstrings
 
 ;
+::ide::idé
+:*:ideer::idéer
+
+;
 ::js::javascript
 ::anst::android studio
 ::ciq::connect iq
@@ -30,9 +34,13 @@ Insert::
 ; markdown
 :*:mdsum::[summary]: {#} ""{Left}
 :*:mdcode::``````{Enter 2}````````{BackSpace}{Left 5}
-:*:mdfm::---{Enter 2}---{Enter}{Left 5}
+:*:mdfm::---{Enter 2}---{Enter 2}{Left 6}
 :*:mdali::---{Enter}aliases: []{Enter}---{Enter}{Left 6}
+:*:mdpap::---{Enter}retrieved: {Enter}---{Enter}{Left 5}
 :*:mdtags::---{Enter}tags: []{Enter}---{Enter}{Left 6}
+
+; obsidian
+:*:dv.p(::dv.paragraph(){Left}
 
 ; python
 :*b0:def main():::{Enter}{Tab}pass{Enter 2}{BackSpace}if __name__ == "__main__":{Enter}{Tab}main()

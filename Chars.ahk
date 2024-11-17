@@ -22,7 +22,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :*:&mdash::—
 :*:&ltank::—
 ::&---::—
-:*?:---::—
+;:*?:---::—
 :*:&endash::–
 :*:&ndash::–
 :*:&tank::–
@@ -61,12 +61,24 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 
 ;
 
+; arrows
+:*:&=>::⇒
+:*:&<=>::⇔
+:*:&->::→
+:*:&right::→
+:*:&<-::←
+:*:&left::←
+:*:&up::↑
+:*:&down::↓
+:*:&|->::↦
+
 ; misc
 :*:&deg::°
 :*:&^*::°
 :*:&curren::¤
 :*:&money::¤
 :*:&numero::№
+:*:&#::№
 :*:&tm::™
 :*:&;::ː
 :*:&box::□
@@ -124,13 +136,6 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :*:&_|_::⊥
 ::&<=::≤
 :*:&>=::≥
-:*:&=>::⇒
-:*:&<=>::⇔
-:*:&->::→
-:*:&<-::←
-:*:&up::↑
-:*:&down::↓
-:*:&|->::↦
 :*:&natural::ℕ
 :*:&integer::ℤ
 :*:&rational::ℚ
@@ -146,6 +151,8 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :*:&and::∧
 :*:&therefore::∴
 :*:&because::∵
+
+; languages
 
 ; nordic
 :*:&dh::ð

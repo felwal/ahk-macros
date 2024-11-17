@@ -69,7 +69,7 @@ ButtonTransfer:
     FormatTime, Month, % DateAndTime, % "MM"
   
     ; read destination
-    Destination := ReDestination "\" Year "\" Year "-" Month
+    Destination := ReDestination ; "\" Year "\" Year "-" Month
   
     ; read name
     Name := Date "-" Time
