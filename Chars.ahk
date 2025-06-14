@@ -32,6 +32,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 ;
 :*:&!?::‽
 :*:&?!::‽
+:*:&interrobang::‽
 :*:&irony::؟
 :*:&...::…
 :*:&***::⁂
@@ -71,6 +72,12 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :*:&up::↑
 :*:&down::↓
 :*:&|->::↦
+:*:&undo::↩
+:*:&return::↩
+:*:&start::↩
+:*:&restart::↩
+:*:&redo::↪
+:*:&end::↪
 
 ; misc
 :*:&deg::°
@@ -83,6 +90,9 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :*:&;::ː
 :*:&box::□
 :*:&square::□
+:*:&copyr::©
+:*:&copyl::🄯
+:*:&tm::™
 
 ; emoji
 :*:&<3::❤
@@ -154,22 +164,37 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 
 ; languages
 
+; IPA
+
+::&ng::ŋ
+::&sh::ʃ
+::&zh::ʒ
+::&3::ʒ
+::&ts::ɕ
+::&z::ʑ
+:*:&?::ʔ
+:*:&glottal::ʔ
+:*:&e::ə
+::&schwa::ə
+
 ; nordic
 :*:&dh::ð
 :*:&edh::ð
-:*:&th::þ
+::&th::þ
 :*:&thorn::þ
+:*:&ä::æ
 :*:&ae::æ
 :*:&ash::æ
+:*:&ö::ø
 :*:&oe::œ
 :*:&ethel::œ
-:*:&ö::ø
 
 ; german
 :C*:&eszett::ß
 :C*:&sharps::ß
 :C*:&Eszett::ẞ
 :C*:&Sharps::ẞ
+:*:&longs::ſ
 
 ; greek
 :*:&alpha::α
