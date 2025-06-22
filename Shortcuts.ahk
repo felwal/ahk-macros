@@ -29,7 +29,7 @@ Insert::
 ::gciq::garmin connect iq
 
 ; xml
-:*b0:<!::--  -->{Left 4}
+;:*b0:<!::--  -->{Left 4}
 
 ; markdown
 :*:mdsum::[summary]: {#} ""{Left}

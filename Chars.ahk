@@ -26,7 +26,8 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :?*:&ndash::–
 :?*:&tank::–
 :?:&--::–
-:?:--::–
+:?*:--::–
+:?*:+++::---
 
 ;
 :?*:&!?::‽
@@ -141,7 +142,9 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :?*:&empty::∅
 :?*:&tom::∅
 :?*:&parallell::∥
+:?*:&||::∥
 :?*:&perp::⊥
+:?*:&orto::⊥
 :?*:&_|_::⊥
 :?:&<=::≤
 :?*:&>=::≥
@@ -165,25 +168,31 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 
 ; IPA
 
-:?:&ng::ŋ
-:?:&sh::ʃ
-:?:&zh::ʒ
-:?:&3::ʒ
-:?:&ts::ɕ
-:?:&z::ʑ
+:?o:&ng::ŋ
+:?o:&sh::ʃ
+:?o:&zh::ʒ
+:?o:&3::ʒ
+:?o:&ts::ɕ
+:?o:&z::ʑ
 :?*:&?::ʔ
 :?*:&glottal::ʔ
-:?*:&e::ə
+:?o:&e::ə
 :?:&schwa::ə
+:?o:&v::ʌ
+:?*:&wedge::ʌ
+:?*:&caret::ʌ
+:?*:&hat::ʌ
 
 ; nordic
 :?*:&dh::ð
 :?*:&edh::ð
 :?:&th::þ
 :?*:&thorn::þ
+:?*:ää::æ
 :?*:&ä::æ
 :?*:&ae::æ
 :?*:&ash::æ
+:?*:öö::ø
 :?*:&ö::ø
 :?*:&oe::œ
 :?*:&ethel::œ
