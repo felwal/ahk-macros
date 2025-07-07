@@ -10,7 +10,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :?:&emsp::  ; m/1
 :?:&ensp::  ; m/2
 :?:&thicksp::  ; m/3
-:?:&nbsp::  ; m/4
+:?*:&nbsp::  ; m/4
 ;Ctrl & Space::  ; nbsp
 :?*:&thinsp::  ; m/8
 :?*:&nbthinsp::  ; m/8
@@ -26,8 +26,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :?*:&ndash::–
 :?*:&tank::–
 :?:&--::–
-:?*:--::–
-:?*:+++::---
+:?o:-- ::–
 
 ;
 :?*:&!?::‽
