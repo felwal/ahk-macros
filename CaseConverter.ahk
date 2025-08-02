@@ -84,53 +84,6 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
   ReplaceSelection(UpperCase(GetSelection()))
   Return
 
-; convert to coding cases
-
-; kebab-case
-^+k::
-  Selection := GetSelection()
-  SelectionKebab := KebabCase(Selection)
-
-  ; toggle
-  if (Selection == SelectionKebab) {
-    ReplaceSelection(SpaceCase(Selection))
-  }
-  else {
-    ReplaceSelection(SelectionKebab)
-  }
-
-  Return
-
-; snake case
-^+n::
-  Selection := GetSelection()
-  SelectionSnake := SnakeCase(Selection)
-
-  ; toggle
-  if (Selection == SelectionSnake) {
-    ReplaceSelection(SpaceCase(Selection))
-  }
-  else {
-    ReplaceSelection(SelectionSnake)
-  }
-
-  Return
-
-; camelCase
-^+c::
-  ReplaceSelection(CamelCase(GetSelection()))
-  Return
-
-; PascalCase
-;^+p::
-;  ReplaceSelection(PascalCase(GetSelection()))
-;  Return
-
-; CAP_CASE
-^+q::
-  ReplaceSelection(CapCase(GetSelection()))
-  Return
-
 ; writing cases
 
 LowerCase(String) {

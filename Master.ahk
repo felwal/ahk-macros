@@ -14,20 +14,18 @@ Gui, Show, h283 w290, % "AutoHotKey Master"
 ; texts
 Gui, Add, Text, x20 y10 w120 h20, % "Shortcuts"
 Gui, Add, Text, x20 y40 w120 h20, % "Chars"
-Gui, Add, Text, x20 y70 w120 h20, % "Typographer"
-Gui, Add, Text, x20 y100 w120 h20, % "CaseConverter"
-Gui, Add, Text, x20 y130 w120 h20, % "PhotoTransfer"
-Gui, Add, Text, x20 y160 w120 h20, % "LapseTransfer"
-Gui, Add, Text, x20 y190 w120 h20, % "AutoStart"
+Gui, Add, Text, x20 y70 w120 h20, % "CaseConverter"
+Gui, Add, Text, x20 y100 w120 h20, % "PhotoTransfer" 
+Gui, Add, Text, x20 y130 w120 h20, % "LapseTransfer" 
+Gui, Add, Text, x20 y160 w120 h20, % "AutoStart" 
 
 ; buttons
 Gui, Add, Button, x200 y10 w75 h20 gRunShortcuts, % "Run"
 Gui, Add, Button, x200 y40 w75 h20 gRunChars, % "Run"
-Gui, Add, Button, x200 y70 w75 h20 gRunTypographer, % "Run"
-Gui, Add, Button, x200 y100 w75 h20 gRunCaseConverter, % "Run"
-Gui, Add, Button, x200 y130 w75 h20 gRunPhotoTransfer, % "Run"
-Gui, Add, Button, x200 y160 w75 h20 gRunLapseTransfer, % "Run"
-Gui, Add, Button, x200 y190 w75 h20 gRunAutoStart, % "Run"
+Gui, Add, Button, x200 y70 w75 h20  gRunCaseConverter, % "Run"
+Gui, Add, Button, x200 y100 w75 h20 gRunPhotoTransfer, % "Run"
+Gui, Add, Button, x200 y130 w75 h20 gRunLapseTransfer, % "Run"
+Gui, Add, Button, x200 y160 w75 h20 gRunAutoStart, % "Run"
 
 Return ; end of auto-execute
 
@@ -43,10 +41,6 @@ RunShortcuts:
 
 RunChars:
   Run, % "Chars.ahk"
-  Return
-
-RunTypographer:
-  Run, % "Typographer.ahk"
   Return
 
 RunCaseConverter:
