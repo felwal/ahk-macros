@@ -78,11 +78,17 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :?*:&redo::↪
 :?*:&end::↪
 
+; currency
+:?*:&currency::¤
+:?*:&euro::€
+:?*:&dollar::$
+:?*:&cent::¢
+:?*:&pound::£
+:?*:&rupee::₹
+
 ; misc
 :?*:&deg::°
 :?*:&^*::°
-:?*:&curren::¤
-:?*:&money::¤
 :?*:&numero::№
 :?*:&#::№
 :?*:&tm::™
@@ -92,6 +98,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :?*:&copyr::©
 :?*:&copyl::🄯
 :?*:&tm::™
+:?*:&check::✓
 
 ; emoji
 :?*:&<3::❤
@@ -130,6 +137,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :?*:&~=::≈
 :?*:&=::≈
 :?*:&prop::∝
+:?*:&corr::∝
 :?*:&congruent::≡
 :?*:&subset::⊆
 :?*:&tsubset::⊂
@@ -163,11 +171,32 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :?*:&therefore::∴
 :?*:&because::∵
 
+; numbers
+:?*:&1/2::½
+:?*:&1/3::⅓
+:?*:&1/4::¼
+:?*:&1/5::⅕
+:?*:&1/6::⅙
+:?*:&1/7::⅐
+:?*:&1/8::⅛
+:?*:&1/9::⅑
+:?*:&1/10::⅒
+:?*:&2/3::⅔
+:?*:&2/5::⅖
+:?*:&3/4::¾
+:?*:&3/5::⅗
+:?*:&3/8::⅜
+:?*:&4/5::⅘
+:?*:&5/6::⅚
+:?*:&5/8::⅝
+:?*:&7/8::⅞
+
 ; languages
 
 ; IPA
-
 :?o:&ng::ŋ
+:?o:&rl::ɺ
+:?o:&rd::ɖ
 :?o:&sh::ʃ
 :?o:&zh::ʒ
 :?o:&3::ʒ
