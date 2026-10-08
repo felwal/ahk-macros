@@ -66,7 +66,8 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :?*:&<=>::⇔
 :?*:&->::→
 :?*:&right::→
-:?*:&<-::←
+:?:&<-::←
+:?*:&<->::↔
 :?*:&left::←
 :?*:&up::↑
 :?*:&down::↓
@@ -85,6 +86,8 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :?*:&cent::¢
 :?*:&pound::£
 :?*:&rupee::₹
+:?*:&naira::₦
+:?*:&franc::₣
 
 ; misc
 :?*:&deg::°
@@ -99,6 +102,20 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :?*:&copyl::🄯
 :?*:&tm::™
 :?*:&check::✓
+
+; astrology
+:?*:&aries::♈︎
+:?*:&taurus::♉︎
+:?*:&gemini::♊︎
+:?*:&cancer::♋︎
+:?*:&leo::♌︎
+:?*:&virgo::♍︎
+:?*:&libra::♎︎
+:?*:&scorpio::♏︎
+:?*:&sagittarius::♐︎
+:?*:&capricorn::♑︎
+:?*:&aquarius::♒︎
+:?*:&pisces::♓︎
 
 ; emoji
 :?*:&<3::❤
@@ -135,7 +152,7 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :?*:&!=::≠
 :?*:&approx::≈
 :?*:&~=::≈
-:?*:&=::≈
+:?:&=::≈
 :?*:&prop::∝
 :?*:&corr::∝
 :?*:&congruent::≡
@@ -172,6 +189,16 @@ SetWorkingDir, % A_ScriptDir ; Ensures a consistent starting directory.
 :?*:&because::∵
 
 ; numbers
+:?:&0::⁰
+:?:&1::¹
+:?:&2::²
+:?:&3::³
+:?:&4::⁴
+:?:&5::⁵
+:?:&6::⁶
+:?:&7::⁷
+:?:&8::⁸
+:?:&9::⁹
 :?*:&1/2::½
 :?*:&1/3::⅓
 :?*:&1/4::¼
